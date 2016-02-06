@@ -21,6 +21,7 @@ import android.text.TextWatcher;
 import android.text.method.PasswordTransformationMethod;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
@@ -38,6 +39,7 @@ import com.nononsenseapps.filepicker.FilePickerActivity;
 
 import org.apache.sshd.SshServer;
 import org.apache.sshd.common.NamedFactory;
+import org.apache.sshd.common.file.virtualfs.VirtualFileSystemFactory;
 import org.apache.sshd.server.Command;
 import org.apache.sshd.server.PasswordAuthenticator;
 import org.apache.sshd.server.UserAuth;
@@ -551,6 +553,7 @@ public class MainActivity extends AppCompatActivity {
     public void setupSftpServer(View v){
         final int serverPort=58060;
 
+
         Thread thread = new Thread(new Runnable() {
 
             @Override
@@ -558,7 +561,7 @@ public class MainActivity extends AppCompatActivity {
 
                 try {
                     showtoast("Starting Server...");
-                    SshServer sshd = SshServer.setUpDefaultServer();
+                    final SshServer sshd = SshServer.setUpDefaultServer();
                     sshd.setPort(serverPort);
                     //sshd.setHost("0.0.0.0");
                     showtoast("Step 1");
@@ -584,19 +587,26 @@ public class MainActivity extends AppCompatActivity {
                     });
 
                     sshd.setCommandFactory(new ScpCommandFactory());
-                    String dir = Environment.getExternalStorageDirectory().getPath();
+                    final String dir = Environment.getExternalStorageDirectory().getAbsolutePath();
 
 
 
                     List<NamedFactory<Command>> namedFactoryList = new ArrayList<NamedFactory<Command>>();
                     namedFactoryList.add(new SftpSubsystem.Factory());
                     sshd.setSubsystemFactories(namedFactoryList);
-                    //sshd.setFileSystemFactory();
+
+                    showtoast("Path : " + dir);
+                    sshd.setFileSystemFactory(new VirtualFileSystemFactory(dir));
+
+
 
                             showtoast("Step 2");
                         sshd.start();
                     String serHost = sshd.getHost();
                         showtoast("Server Started on port :" + serverPort);
+
+
+
                         String SerIp = Utils.getIPAddress(true);
                     PugNotification.with(MainActivity.this)
                             .load()
@@ -607,6 +617,21 @@ public class MainActivity extends AppCompatActivity {
                             .flags(Notification.DEFAULT_ALL)
                             .simple()
                             .build();
+                    Button b=(Button)findViewById(R.id.stopServer);
+                    b.setVisibility(View.VISIBLE);
+                    b.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            try {
+                                sshd.stop();
+                                showtoast("Server Stopped.");
+                            } catch (InterruptedException e) {
+                                showtoast("Interrrupt Exception : " + e);
+
+                            }
+
+                        }
+                    });
 
                 }
                 catch(Exception e){
@@ -623,6 +648,11 @@ public class MainActivity extends AppCompatActivity {
         }catch(Exception e){
             showtoast("Error " + e);
         }
+
+
+
+
+
 
 }
 

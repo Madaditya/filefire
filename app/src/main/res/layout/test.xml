@@ -12,4 +12,14 @@
         android:layout_centerHorizontal="true"
         android:onClick="setupSftpServer"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stopserver"
+        android:id="@+id/stopServer"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/startServer"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

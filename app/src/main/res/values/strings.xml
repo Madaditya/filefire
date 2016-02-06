@@ -28,4 +28,5 @@
     <string name="ConnectTitle">Connect to Server</string>
     <string name="connect">Connect</string>
     <string name="savedetails">Save Details</string>
+    <string name="stopserver">Stop Server</string>
 </resources>
