@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">File Fire</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="ppr_download">Wake Up PC</string>
+    <string name="machint">Mac Address</string>
+    <string name="wolstring">Wake On Lan</string>
+    <string name="namehint">Device Name:Eg-Home Pc</string>
+    <string name="iphint">Broadcast Ip : eg - 192.160.0.255</string>
+    <string name="sftpiphint">Hostname or IP</string>
+    <string name="sftpporthint">Port</string>
+    <string name="sftppasshint">Password</string>
+    <string name="sftpbutton">Connect</string>
+    <string name="sftpuserhint">Username</string>
+    <string name="dmessage">Test String
+        This is new</string>
+    <string name="positive_button">Okay</string>
+    <string name="negative_button">Cancel</string>
+    <string name="dtitle">Dialogue Box</string>
+    <string name="clickme">Dialogue</string>
+    <string name="dlistbutton">List</string>
+    <string name="imagedescription">List</string>
+    <string name="portscan">Scan Open Networks</string>
+    <string name="file_picker">File Picker</string>
+    <string name="file_explorer">File Explorer</string>
+    <string name="serverstart">Start SFTP Server</string>
+    <string name="dialogueToConnect">Browse Remote Files</string>
+    <string name="ConnectTitle">Connect to Server</string>
+    <string name="connect">Connect</string>
+    <string name="savedetails">Save Details</string>
+</resources>

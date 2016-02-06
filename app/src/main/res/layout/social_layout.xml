@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10pt"
+        android:layout_marginStart="10pt"
+        android:layout_marginRight="10pt"
+        android:layout_marginTop="40pt"
+        android:layout_marginEnd="10pt"
+        android:layout_height="20pt"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/sftpuserhint"
+        android:id="@+id/sftpuser" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10pt"
+        android:layout_marginStart="10pt"
+        android:layout_marginRight="10pt"
+        android:layout_marginEnd="10pt"
+        android:layout_height="20pt"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/sftpuser"
+        android:hint="@string/sftpiphint"
+        android:id="@+id/sftpip" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10pt"
+        android:layout_marginStart="10pt"
+        android:layout_marginRight="10pt"
+        android:layout_marginEnd="10pt"
+        android:layout_height="20pt"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/sftpip"
+        android:inputType="number"
+        android:hint="@string/sftpporthint"
+        android:id="@+id/sftpport" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10pt"
+        android:layout_marginStart="10pt"
+        android:layout_marginRight="10pt"
+        android:layout_marginEnd="10pt"
+        android:layout_height="20pt"
+        android:layout_centerInParent="true"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/sftppass"
+        android:layout_below="@id/sftpport"
+        android:hint="@string/sftppasshint"/>
+
+    <com.dd.processbutton.iml.ActionProcessButton
+        android:id="@+id/filexbutton"
+        custom:pb_colorComplete="@color/green_complete"
+        custom:pb_colorPressed="@color/blue_pressed"
+        custom:pb_colorProgress="@color/purple_progress"
+        custom:pb_textComplete="Success"
+        custom:pb_textProgress="Loading"
+        custom:pb_textError="Error"
+        custom:pb_colorError="@color/red_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sftpbutton"
+        android:layout_below="@id/sftppass"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10pt"
+        android:onClick="sftpconnect"/>
+
+
+
+</RelativeLayout>
+</ScrollView>

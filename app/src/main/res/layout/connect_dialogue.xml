@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sftpuserhint"
+            android:id="@+id/dsftpusertextid"
+            android:layout_marginLeft="4pt"
+            android:layout_marginStart="4pt"
+            android:textStyle="bold"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_marginLeft="2pt"
+            android:layout_marginStart="2pt"
+            android:layout_marginRight="2pt"
+            android:layout_marginEnd="2pt"
+            android:layout_height="20pt"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/dsftpusertextid"
+            android:hint="@string/sftpuserhint"
+            android:id="@+id/dsftpuser"
+            android:layout_marginBottom="4pt"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sftpiphint"
+        android:id="@+id/dsftpiptextid"
+        android:layout_marginLeft="4pt"
+        android:layout_marginStart="4pt"
+        android:layout_below="@id/dsftpuser"
+        android:textStyle="bold"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_marginLeft="2pt"
+            android:layout_marginStart="2pt"
+            android:layout_marginRight="2pt"
+            android:layout_marginEnd="2pt"
+            android:layout_height="20pt"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/dsftpiptextid"
+            android:hint="@string/sftpiphint"
+            android:id="@+id/dsftpip"
+            android:layout_marginBottom="4pt"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sftpporthint"
+        android:id="@+id/dsftpporttextid"
+        android:layout_marginLeft="4pt"
+        android:layout_marginStart="4pt"
+        android:layout_below="@id/dsftpip"
+        android:textStyle="bold"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_marginLeft="2pt"
+            android:layout_marginStart="2pt"
+            android:layout_marginRight="2pt"
+            android:layout_marginEnd="2pt"
+            android:layout_height="20pt"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/dsftpporttextid"
+            android:inputType="number"
+            android:hint="@string/sftpporthint"
+            android:id="@+id/dsftpport"
+            android:layout_marginBottom="4pt"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sftppasshint"
+        android:id="@+id/dsftppasstextid"
+        android:layout_marginLeft="4pt"
+        android:layout_marginStart="4pt"
+        android:layout_below="@id/dsftpport"
+        android:textStyle="bold"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_marginLeft="2pt"
+            android:layout_marginStart="2pt"
+            android:layout_marginRight="2pt"
+            android:layout_marginEnd="2pt"
+            android:layout_height="20pt"
+            android:layout_centerInParent="true"
+            android:inputType="textPassword"
+            android:ems="2"
+            android:id="@+id/dsftppass"
+            android:layout_below="@id/dsftppasstextid"
+            android:hint="@string/sftppasshint"
+            android:layout_marginBottom="4pt"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dsftppass"
+        android:text="@string/savedetails"
+        android:id="@+id/savedetails"/>
+
+
+
+
+    </RelativeLayout>
