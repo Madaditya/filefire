@@ -2,17 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-
-    <item android:title="Inbox"
-          android:id="@+id/nav_item_inbox"
+    <item android:title=""/>
+    <item android:title="WoL"
+          android:id="@+id/nav_item_wol"
           android:icon="@drawable/inbox"/>
 
-    <item android:title="Sent"
-          android:id="@+id/nav_item_sent"
+    <item android:title="Client"
+          android:id="@+id/nav_item_client"
           android:icon="@drawable/sent"/>
 
-    <item android:title="Drafts"
-          android:id="@+id/nav_item_draft"
+    <item android:title="Server"
+          android:id="@+id/nav_item_server"
           android:icon="@drawable/draft"/>
 
 
@@ -20,18 +20,21 @@
     <item android:title="Others">
         <menu>
             <item
-                android:title="Spam"
-                android:icon="@drawable/spam"/>
+                android:title="Research"
+                android:icon="@drawable/spam"
+                android:id="@+id/research"/>
             <item
-                android:title="Bin"
-                android:icon="@drawable/bin"/>
+                android:title="About"
+                android:icon="@drawable/bin"
+                android:id="@+id/about"/>
         </menu>
     </item>
 
-    <group android:id="@+id/group_settings_id">
+    <group android:id="@+id/group_settings_id" >
 
         <item android:title="Settings"
-              android:icon="@drawable/settings"/>
+              android:icon="@drawable/settings"
+            android:id="@+id/settings"/>
         <item android:title="Help"
              android:icon="@drawable/help"/>
     </group>

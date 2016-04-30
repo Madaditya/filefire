@@ -6,58 +6,94 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:id="@+id/connectText"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/holo_blue_dark"
+        android:text="@string/connecttoserver"/>
 
-    <EditText
+    <com.wrapp.floatlabelededittext.FloatLabeledEditText
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/connectText"
         android:layout_marginLeft="10pt"
         android:layout_marginStart="10pt"
         android:layout_marginRight="10pt"
-        android:layout_marginTop="40pt"
+        android:layout_marginTop="8pt"
         android:layout_marginEnd="10pt"
-        android:layout_height="20pt"
         android:layout_centerHorizontal="true"
+        android:id="@+id/f_sftpuser"
+        >
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sftpuser"
         android:hint="@string/sftpuserhint"
-        android:id="@+id/sftpuser" />
+         />
+    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
 
-    <EditText
+    <com.wrapp.floatlabelededittext.FloatLabeledEditText
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="10pt"
         android:layout_marginStart="10pt"
         android:layout_marginRight="10pt"
         android:layout_marginEnd="10pt"
-        android:layout_height="20pt"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/sftpuser"
+        android:id="@+id/f_sftpip"
+        android:layout_below="@id/f_sftpuser"
+        >
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sftpip"
         android:hint="@string/sftpiphint"
-        android:id="@+id/sftpip" />
+         />
+    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
 
-    <EditText
+    <com.wrapp.floatlabelededittext.FloatLabeledEditText
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="10pt"
         android:layout_marginStart="10pt"
         android:layout_marginRight="10pt"
         android:layout_marginEnd="10pt"
-        android:layout_height="20pt"
-        android:layout_centerInParent="true"
-        android:layout_below="@+id/sftpip"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/f_sftpport"
+        android:layout_below="@id/f_sftpip"
+        >
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:inputType="number"
+        android:id="@+id/sftpport"
         android:hint="@string/sftpporthint"
-        android:id="@+id/sftpport" />
-
-    <EditText
+         />
+    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+    <com.wrapp.floatlabelededittext.FloatLabeledEditText
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="10pt"
         android:layout_marginStart="10pt"
         android:layout_marginRight="10pt"
         android:layout_marginEnd="10pt"
-        android:layout_height="20pt"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/f_sftppass"
+        android:layout_below="@id/f_sftpport"
+        >
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:ems="10"
         android:id="@+id/sftppass"
-        android:layout_below="@id/sftpport"
+        android:ems="10"
         android:hint="@string/sftppasshint"/>
-
+    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
     <com.dd.processbutton.iml.ActionProcessButton
         android:id="@+id/filexbutton"
         custom:pb_colorComplete="@color/green_complete"
@@ -70,7 +106,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/sftpbutton"
-        android:layout_below="@id/sftppass"
+        android:layout_below="@id/f_sftppass"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:layout_margin="10pt"

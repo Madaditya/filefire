@@ -1,5 +1,9 @@
 package com.patent.filefire;
 
+/**
+ * Created by Mike on 28-Jan-16.
+ */
+
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -7,15 +11,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * Created by Ratan on 7/29/2015.
- */
-public class PrimaryFragment extends Fragment {
+public class ServerFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.primary_layout, null);
+        return inflater.inflate(R.layout.sftpserver_layout, null);
     }
 
 

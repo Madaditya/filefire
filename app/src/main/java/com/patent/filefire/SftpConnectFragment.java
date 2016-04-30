@@ -10,11 +10,14 @@ import android.view.ViewGroup;
 /**
  * Created by Ratan on 7/29/2015.
  */
-public class UpdatesFragment extends Fragment {
+public class SftpConnectFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.updates_layout,null);
+        return inflater.inflate(R.layout.sftpconnect_layout,null);
+
     }
+
+
 }

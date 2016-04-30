@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.wrapp.floatlabelededittext.FloatLabeledEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2pt"
+        android:layout_marginStart="2pt"
+        android:layout_marginRight="2pt"
+        android:layout_marginEnd="2pt"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/fs_uname"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/sftpuserhint"
+            android:id="@+id/fs_unametext" />
+    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+    <com.wrapp.floatlabelededittext.FloatLabeledEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2pt"
+        android:layout_marginStart="2pt"
+        android:layout_marginRight="2pt"
+        android:layout_marginEnd="2pt"
+        android:layout_centerInParent="true"
+        android:id="@+id/fs_pass"
+        android:layout_below="@id/fs_uname"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="2"
+            android:id="@+id/fs_passtext"
+            android:hint="@string/sftppasshint" />
+    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/showpass"
+        android:layout_below="@id/fs_pass"
+        style="?android:textAppearanceSmall"
+        android:id="@+id/fs_savedetails"/>
+</RelativeLayout>

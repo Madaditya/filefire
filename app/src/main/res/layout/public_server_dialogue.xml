@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
- <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical" android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <com.wrapp.floatlabelededittext.FloatLabeledEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -10,13 +10,13 @@
         android:layout_marginRight="2pt"
         android:layout_marginEnd="2pt"
         android:layout_centerHorizontal="true"
-        android:id="@+id/f_dsftpuser"
+        android:id="@+id/p_psftpuser"
         >
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/sftpuserhint"
-            android:id="@+id/dsftpuser" />
+            android:id="@+id/psftpuser" />
     </com.wrapp.floatlabelededittext.FloatLabeledEditText>
     <com.wrapp.floatlabelededittext.FloatLabeledEditText
         android:layout_width="match_parent"
@@ -26,15 +26,15 @@
         android:layout_marginRight="2pt"
         android:layout_marginEnd="2pt"
         android:layout_centerHorizontal="true"
-        android:id="@+id/f_dsftpip"
-        android:layout_below="@id/f_dsftpuser"
+        android:id="@+id/p_psftpip"
+        android:layout_below="@id/p_psftpuser"
         >
-    <EditText
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:hint="@string/sftpiphint"
-            android:id="@+id/dsftpip" />
+            android:id="@+id/psftpip" />
     </com.wrapp.floatlabelededittext.FloatLabeledEditText>
     <com.wrapp.floatlabelededittext.FloatLabeledEditText
         android:layout_width="match_parent"
@@ -44,15 +44,15 @@
         android:layout_marginRight="2pt"
         android:layout_marginEnd="2pt"
         android:layout_centerInParent="true"
-        android:id="@+id/f_dsftpport"
-        android:layout_below="@id/f_dsftpip"
+        android:id="@+id/p_psftpport"
+        android:layout_below="@id/p_psftpip"
         >
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:hint="@string/sftpporthint"
-            android:id="@+id/dsftpport"
+            android:id="@+id/psftpport"
             />
     </com.wrapp.floatlabelededittext.FloatLabeledEditText>
     <com.wrapp.floatlabelededittext.FloatLabeledEditText
@@ -63,37 +63,30 @@
         android:layout_marginRight="2pt"
         android:layout_marginEnd="2pt"
         android:layout_centerInParent="true"
-        android:id="@+id/f_dsftppass"
-        android:layout_below="@id/f_dsftpport"
+        android:id="@+id/p_psftppass"
+        android:layout_below="@id/p_psftpport"
         >
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:ems="2"
-            android:id="@+id/dsftppass"
+            android:id="@+id/psftppass"
             android:hint="@string/sftppasshint" />
     </com.wrapp.floatlabelededittext.FloatLabeledEditText>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/f_dsftppass"
+        android:layout_below="@id/p_psftppass"
         android:layout_margin="4dp">
-    <CheckBox
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight=".5"
-        android:text="@string/showpass"
-        style="?android:textAppearanceSmall"
-        android:id="@+id/savedetails"/>
-    <CheckBox
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/isremote"
-        style="?android:textAppearanceSmall"
-        android:layout_weight=".5"
-        android:id="@+id/isremote"/>
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="@string/showpass"
+            style="?android:textAppearanceSmall"
+            android:id="@+id/p_savedetails"/>
     </LinearLayout>
 
 
-    </RelativeLayout>
+</RelativeLayout>

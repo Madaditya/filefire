@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" >
+    <RelativeLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:id="@+id/connectText2"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/holo_blue_dark"
+        android:text="@string/connecttoserver"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search"
+            android:layout_centerInParent="true"
+            android:onClick="ShowConnectDialogue"
+            android:id="@+id/dialogueConnect"
+            android:layout_marginTop="24pt"
+            android:layout_below="@id/connectText2"
+            android:background="@color/transparent"
+            android:hapticFeedbackEnabled="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Browse Files"
+            android:textSize="20dp"
+            android:textColor="@color/md_orange_900"
+            android:layout_below="@id/dialogueConnect"
+            android:layout_centerHorizontal="true"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/folderchooser"
+        android:id="@+id/folderchooser"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/dialogueConnect"
+        android:layout_weight="1"
+        android:onClick="FolderChooser"
+        android:visibility="invisible"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/filechooser"
+        android:layout_below="@id/folderchooser"
+        android:id="@+id/filechooser"
+        android:layout_centerInParent="true"
+        android:layout_weight="1"
+        android:onClick="FilePicker"
+        android:visibility="invisible"/>
+
+
+</RelativeLayout>
+</ScrollView>

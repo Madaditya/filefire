@@ -12,14 +12,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-/**
- * Created by Ratan on 7/27/2015.
- */
 public class TabFragment extends Fragment {
 
     public static TabLayout tabLayout;
     public static ViewPager viewPager;
-    public static int int_items = 4 ;
+    public static int int_items = 3 ;
 
     @Nullable
     @Override
@@ -36,8 +33,7 @@ public class TabFragment extends Fragment {
          */
 
         viewPager.setAdapter(new MyAdapter(getChildFragmentManager()));
-
-
+        viewPager.setCurrentItem(MainActivity.tabPosition, false);
         /**
          * Now , this is a workaround ,
          * The setupWithViewPager dose't works without the runnable .
@@ -69,10 +65,9 @@ public class TabFragment extends Fragment {
         public Fragment getItem(int position)
         {
           switch (position){
-              case 0 : return new PrimaryFragment();
-              case 1 : return new SocialFragment();
-              case 2 : return new UpdatesFragment();
-              case 3 : return new TestFragment();
+              case 0 : return new WolFragment();
+              case 1 : return new FileTransferFragment();
+              case 2 : return new ServerFragment();
           }
         return null;
         }
@@ -93,13 +88,11 @@ public class TabFragment extends Fragment {
 
             switch (position){
                 case 0 :
-                    return "Primary";
+                    return "Wake System";
                 case 1 :
-                    return "Social";
+                    return "File Browser";
                 case 2 :
-                    return "Updates";
-                case 3 :
-                    return "Test";
+                    return "File Server";
             }
                 return null;
         }

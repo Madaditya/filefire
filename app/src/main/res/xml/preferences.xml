@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <PreferenceCategory android:title="General"/>
+    <Preference android:title="@string/public_server_details"
+        android:key="public_server"
+        android:summary="FileFire will use this server for remote connections"
+        />
+    <PreferenceCategory android:title="@string/file_server" android:key="host_files_category"/>
+    <Preference android:title="@string/set_server_pass"
+        android:key="host_files"
+        android:summary="Set your file server username and password"
+        />
+    <SwitchPreference android:title="@string/server_onboot"
+        android:defaultValue="false"
+        android:summary="This option if selected will host your files on boot."
+        android:key="onboot" />
+
+
+</PreferenceScreen>

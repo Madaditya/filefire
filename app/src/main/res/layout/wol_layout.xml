@@ -17,65 +17,95 @@
         android:textColor="@android:color/holo_blue_dark"
         android:text="@string/wolstring"/>
 
-    <EditText
+    <com.wrapp.floatlabelededittext.FloatLabeledEditText
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="10pt"
         android:layout_marginStart="10pt"
         android:layout_marginRight="10pt"
-        android:layout_marginTop="5pt"
         android:layout_marginEnd="10pt"
-        android:layout_height="20pt"
         android:layout_centerInParent="true"
         android:layout_below="@+id/textView"
+        android:id="@+id/f_devicename"
+        >
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="20pt"
+        android:id="@+id/devicename"
         android:hint="@string/namehint"
-        android:id="@+id/devicename" />
+         />
+    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
 
-
-    <EditText
+    <com.wrapp.floatlabelededittext.FloatLabeledEditText
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="10pt"
         android:layout_marginStart="10pt"
         android:layout_marginRight="10pt"
         android:layout_marginEnd="10pt"
-        android:layout_height="20pt"
         android:layout_centerInParent="true"
-        android:layout_below="@+id/devicename"
+        android:layout_below="@id/f_devicename"
+        android:id="@+id/f_ipaddress"
+        >
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="20pt"
+        android:id="@+id/ipaddress"
         android:hint="@string/iphint"
-        android:id="@+id/ipaddress" />
+         />
+    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
 
-    <EditText
+    <com.wrapp.floatlabelededittext.FloatLabeledEditText
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="10pt"
         android:layout_marginStart="10pt"
         android:layout_marginRight="10pt"
         android:layout_marginEnd="10pt"
-        android:layout_height="20pt"
+        android:layout_below="@id/f_ipaddress"
+        android:id="@+id/f_macaddress"
         android:layout_centerInParent="true"
-        android:layout_below="@+id/ipaddress"
+        >
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="20pt"
         android:hint="@string/machint"
         android:id="@+id/macaddress"
-        android:inputType="textCapCharacters"/>
+        android:inputType="textCapCharacters" />
+    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/macaddress"
+        android:layout_below="@id/f_macaddress"
         android:text="@string/ppr_download"
         android:id="@+id/ppr_download"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:onClick="gotoppr"/>
-
-    <Button
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ppr_download"
-        android:text="@string/portscan"
-        android:id="@+id/scan_ports"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
+        android:layout_below="@id/ppr_download"
+        android:layout_margin="12dp">
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/portscan"
+        android:id="@+id/scan_ports"
+        android:layout_weight=".4"
         android:onClick="PortScan"/>
+    <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/restore_wol"
+            android:layout_weight=".4"
+            android:id="@+id/restore_wol"
+        android:onClick="restoreWol"/>
 
+    </LinearLayout>
 
 </RelativeLayout>
 </ScrollView>

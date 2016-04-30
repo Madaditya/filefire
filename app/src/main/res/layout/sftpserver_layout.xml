@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" >
+<RelativeLayout
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:id="@+id/serverText"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/holo_blue_dark"
+        android:text="@string/serverstring"/>
+
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:src="@drawable/server"
+        android:background="@color/transparent"
+        android:layout_height="wrap_content"
+        android:text="@string/serverstart"
+        android:layout_below="@id/serverText"
+        android:id="@+id/startServer"
+        android:onClick="setupSftpServer"
+        android:layout_centerInParent="true"
+        android:layout_margin="24pt"
+        android:hapticFeedbackEnabled="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Start Server"
+        android:textSize="20dp"
+        android:textColor="@color/md_orange_900"
+        android:id="@+id/startButtontext"
+        android:layout_below="@id/startServer"
+        android:layout_centerHorizontal="true"/>
+
+    <com.wrapp.floatlabelededittext.FloatLabeledEditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10pt"
+        android:layout_marginStart="10pt"
+        android:layout_marginRight="10pt"
+        android:layout_marginTop="2pt"
+        android:layout_below="@id/startButtontext"
+        android:layout_marginEnd="10pt"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ServePortWrapper"
+        >
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter Port for Remote Connections"
+            android:id="@+id/getServerport"
+            />
+    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ServePortWrapper"
+        android:id="@+id/remoteServerCheck"
+        android:layout_centerHorizontal="true"
+        android:text="Remote Server"
+        android:layout_margin="2pt"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stopserver"
+        android:id="@+id/stopServer"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/remoteServerCheck"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reverse Port"
+        android:id="@+id/openPort"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/stopServer"
+        android:layout_centerHorizontal="true"
+        android:onClick="openReversePort"
+        android:visibility="invisible"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Disconnect Reverse Port"
+        android:id="@+id/closePort"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/openPort"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+
+</RelativeLayout>
+    </ScrollView>
